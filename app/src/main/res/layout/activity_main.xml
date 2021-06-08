@@ -17,7 +17,8 @@
             app:layout_constraintEnd_toEndOf="@id/gridLayout1"
             app:layout_constraintVertical_chainStyle="packed"
             android:textSize="@dimen/text_size"
-            android:background="@color/gainsboro"/>
+            android:background="@color/gainsboro"
+            android:gravity="end"/>
 
     <GridLayout
             android:id="@+id/gridLayout1"
