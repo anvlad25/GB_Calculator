@@ -5,89 +5,64 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-    <Button
+    <com.google.android.material.button.MaterialButton
             android:id="@+id/button_plus"
-            android:layout_width="@dimen/button_weight"
-            android:layout_height="wrap_content"
+            style="@style/keyboardOperation"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintVertical_chainStyle="packed"
             android:text="@string/label_plus"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/button_minus"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:backgroundTint="@color/deep_sky_blue"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size"/>
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
             android:id="@+id/button_minus"
-            android:layout_width="@dimen/button_weight"
-            android:layout_height="wrap_content"
+            style="@style/keyboardOperation"
             app:layout_constraintHorizontal_bias="0"
             android:text="@string/label_minus"
             app:layout_constraintTop_toBottomOf="@id/button_plus"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/button_multiply"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:backgroundTint="@color/deep_sky_blue"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size"/>
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button android:id="@+id/button_multiply"
-            android:layout_width="@dimen/button_weight"
-            android:layout_height="wrap_content"
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_multiply"
+            style="@style/keyboardOperation"
             app:layout_constraintHorizontal_bias="0"
             android:text="@string/label_multiply"
             app:layout_constraintTop_toBottomOf="@id/button_minus"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/button_division"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:backgroundTint="@color/deep_sky_blue"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size"/>
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
             android:id="@+id/button_division"
-            android:layout_width="@dimen/button_weight"
-            android:layout_height="wrap_content"
+            style="@style/keyboardOperation"
             app:layout_constraintHorizontal_bias="0"
             android:text="@string/label_division"
             app:layout_constraintTop_toBottomOf="@id/button_multiply"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:backgroundTint="@color/deep_sky_blue"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size"/>
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
             android:id="@+id/button_backspace"
-            android:layout_width="@dimen/button_weight"
-            android:layout_height="0dp"
+            style="@style/keyboardOperationBig"
             android:text="@string/label_backspace"
             app:layout_constraintBottom_toBottomOf="@id/button_minus"
             app:layout_constraintStart_toEndOf="@id/button_minus"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/button_plus"
-            android:layout_marginStart="@dimen/marginStart"
-            android:backgroundTint="@color/deep_sky_blue"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size"/>
+            app:layout_constraintTop_toTopOf="@id/button_plus"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
             android:id="@+id/button_equally"
-            android:layout_width="@dimen/button_weight"
-            android:layout_height="0dp"
+            style="@style/keyboardOperationBig"
             android:text="@string/label_equally"
             app:layout_constraintBottom_toBottomOf="@id/button_division"
             app:layout_constraintStart_toEndOf="@id/button_multiply"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/button_multiply"
-            android:layout_marginStart="@dimen/marginStart"
-            android:backgroundTint="@color/deep_sky_blue"
-            android:textColor="@color/black"
-            android:textSize="@dimen/text_size"/>
+            app:layout_constraintTop_toTopOf="@id/button_multiply"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
