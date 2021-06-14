@@ -13,4 +13,35 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="buttonStyle">
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="keyboardStyle" parent="buttonStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/cadet_blue_3</item>
+        <item name="android:layout_width">@dimen/button_weight</item>
+    </style>
+
+    <style name="keyboardStyle0" parent="buttonStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/cadet_blue_3</item>
+        <item name="android:layout_width">@dimen/button_weight0</item>
+    </style>
+
+    <style name="keyboardOperation" parent="buttonStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/deep_sky_blue</item>
+        <item name="android:layout_marginStart">@dimen/marginStart</item>
+        <item name="android:layout_width">@dimen/button_weight</item>
+    </style>
+
+    <style name="keyboardOperationBig" parent="buttonStyle">
+        <item name="android:layout_height">@dimen/button_weight0</item>
+        <item name="android:backgroundTint">@color/deep_sky_blue</item>
+        <item name="android:layout_marginStart">@dimen/marginStart</item>
+        <item name="android:layout_width">@dimen/button_weight</item>
+    </style>
 </resources>
