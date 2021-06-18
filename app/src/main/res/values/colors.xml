@@ -10,4 +10,7 @@
     <color name="cadet_blue_3">#7AC5CD</color>
     <color name="deep_sky_blue">#009ACD</color>
     <color name="gainsboro">#DCDCDC</color>
+    <color name="lightBlack">#191919</color>
+    <color name="gray">#7F7F7F</color>
+    <color name="darkPurple">#A39FAB</color>
 </resources>

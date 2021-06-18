@@ -9,15 +9,12 @@
 
     <com.google.android.material.textview.MaterialTextView
             android:id="@+id/textView1"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
+            style="@style/textView"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@id/gridLayout1"
             app:layout_constraintStart_toStartOf="@id/gridLayout1"
             app:layout_constraintEnd_toEndOf="@id/gridLayout1"
             app:layout_constraintVertical_chainStyle="packed"
-            android:textSize="@dimen/text_size"
-            android:background="@color/gainsboro"
             android:gravity="end"/>
 
     <GridLayout
@@ -50,6 +47,15 @@
                 app:layout_constraintStart_toEndOf="@id/keyboard"/>
 
     </GridLayout>
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_Settings"
+            style="@style/keyboardStyle"
+            app:icon="@drawable/ic_settings"
+            app:iconTint="@color/black"
+            android:layout_marginEnd="@dimen/marginStart"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

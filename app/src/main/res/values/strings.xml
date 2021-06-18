@@ -17,4 +17,5 @@
     <string name="label_multiply">*</string>
     <string name="label_backspace">C</string>
     <string name="label_equally">=</string>
+    <string name="switchTheme">Тёмная/Светлая тема</string>
 </resources>

@@ -1,20 +1,36 @@
 package com.example.gbcalculator;
 
-import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Intent;
 import android.widget.Button;
 import android.widget.TextView;
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import java.text.DecimalFormat;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     private Values values;
+    private Settings settings;
     private static final String PLUS = "+";
     private static final String MINUS = "-";
     private static final String MULTIPLY = "*";
     private static final String DIVISION = "/";
+
+    private final ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == Activity.RESULT_OK) {
+                    Intent data = result.getData();
+                    if (data != null) {
+                        settings = data.getParcelableExtra(Settings.V_SETTINGS);
+                    }
+                }
+            });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         values = new Values();
+        settings = new Settings();
 
         initElem();
     }
@@ -49,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
         Button button_backspace = findViewById(R.id.button_backspace);
         Button button_equally = findViewById(R.id.button_equally);
 
+        Button button_settings = findViewById(R.id.button_Settings);
+
         buttonClickSymbol(button_0, textView1);
         buttonClickSymbol(button_1, textView1);
         buttonClickSymbol(button_2, textView1);
@@ -69,6 +88,11 @@ public class MainActivity extends AppCompatActivity {
         buttonClickEquals(button_equally, textView1);
         button_backspace.setOnClickListener(v -> textView1.setText(""));
 
+        button_settings.setOnClickListener(v -> {
+            Intent runSettings = new Intent(this, SettingsActivity.class);
+            runSettings.putExtra(Settings.V_SETTINGS, settings);
+            activityResultLauncher.launch(runSettings);
+        });
     }
 
     private void buttonClickSymbol(Button button, TextView textView) {

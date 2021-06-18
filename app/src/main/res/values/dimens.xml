@@ -2,6 +2,7 @@
 <resources>
     <dimen name="marginStart">5dp</dimen>
     <dimen name="button_weight">60dp</dimen>
-    <dimen name="button_weight0">0dp</dimen>
+    <dimen name="text_view_weight">40dp</dimen>
+    <dimen name="weight0">0dp</dimen>
     <dimen name="text_size">20sp</dimen>
 </resources>
